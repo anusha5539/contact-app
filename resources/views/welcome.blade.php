@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Contact</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -41,11 +41,42 @@
             }
 
             .content {
-                text-align: center;
-            }
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('contact/bg.png');
+            height: 100%;
+            width: 100%;
+            position: relative;
+            top: 3rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
+        .image{
+            padding-top: 10rem;
+            color:white;
+        }
+        .para{  
+        padding-left: 5rem;
+        padding-right: 5rem;
+        justify-content: center;
+        display:justify;
+    }
 
+
+@media(max-width:600px){
+    .image{
+        padding-top:5rem;
+    }
+    .para{  
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+  
             .title {
-                font-size: 84px;
+                font-size: 65px;
+                font-weight: bold;
             }
 
             .links > a {
@@ -80,15 +111,23 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="image">
+                <div class="title">
+                    CONTACT
                 </div>
-
+                <p class="para">
+                    "Welcome to our Contact Dashboard! Here, you can effortlessly connect with us and add your company details for seamless communication. Simply fill in the necessary information about your company and your contact details below. We're eager to hear from you and ready to assist with any inquiries or assistance you may need. Thank you for choosing to connect with us!"
+                </p>
+            </div>
+{{-- 
                 <div class="links">
                     <a href="{{route('contacts.create')}}">Add new</a>
                     <a href="{{route('contacts.show',1)}}">show contact</a>
-                </div>
+                </div> --}}
             </div>
+        </div>
+        <div classs="conntact">
+
         </div>
     </body>
 </html>

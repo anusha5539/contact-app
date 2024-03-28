@@ -2,12 +2,12 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable 
 {
     use Notifiable;
 
@@ -17,7 +17,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'first_name','last_name','email', 'password','bio','company','Profile_picture'
+        'first_name','last_name','email', 'password','bio','company','profilepicture'
     ];
 
     /**
@@ -38,9 +38,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    public function contacts(){
-        return $this->hasMany('App\Contact');
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class);
     }
+    
     public function companies(){
         return $this->hasMany('App\Company');
     }

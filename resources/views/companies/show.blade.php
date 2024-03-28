@@ -46,7 +46,7 @@
                     <div class="form-group row mb-0">
                       <div class="col-md-9 offset-md-3">
                           <a href="{{route('company.edit',$company->id)}}" class="btn btn-info">Edit</a>
-                          <a href="#" class="btn btn-outline-danger">Delete</a>
+                          <a href="{{route('company.destroy',$company->id)}}" class="btn btn-outline-danger">Delete</a>
                           <a href="{{route('company.index')}}" class="btn btn-outline-secondary">Cancel</a>
                       </div>
                     </div>

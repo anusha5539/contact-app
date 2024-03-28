@@ -79,13 +79,13 @@ class ProfileController extends Controller
         $profileData=$request->validated();
         $profile=$request->user();
 
-        if($request->hasFile('Profile_picture')){
-            $picture=$request->Profile_picture;
-            $fileName="profile-picture-{$profile->id}.".$picture->getClientOriginalExtension();
+        if($request->hasFile('profilepicture')){
+            $picture=$request->profilepicture;
+            $fileName="profilepicture-{$profile->id}.".$picture->getClientOriginalExtension();
             // $picture->move(public_path('upload'),$fileName);
             $fileName=Storage::putFileAs("/uploads",$picture,$fileName);
 
-            $profileData['Profile_picture']=$fileName;
+            $profileData['profilepicture']=$fileName;
 
         };
        

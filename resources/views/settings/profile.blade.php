@@ -65,30 +65,13 @@
 
                     <div class="form-group">
                         <label for="bio">Bio</label>
-                        <textarea name="bio" id="biod" rows="3" class="form-control">{{old('bio', $user->bio)}}</textarea>
+                        <input type="text" name="bio" id="biod" rows="3" class="form-control"value={{old('bio', $user->bio)}}></input>
                         @error('bio')
                         <div >{{$message}}</div>
                         @enderror
                     </div>
                   </div>
-                  <div class="offset-md-1 col-md-3">
-                    <div class="form-group">
-                        <label for="bio">Profile picture</label>
-                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                            <div class="fileinput-new img-thumbnail" style="width: 150px; height: 150px;">
-                                <img src='{{$user->Profilepic()}}'  alt="error loading image">
-                            </div>
-                            <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 150px; max-height: 150px;"></div>
-                            <div class="mt-2">
-                                <span class="btn btn-outline-secondary btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file"  name='Profile_picture' ></span>
-                                <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
-                            </div>
-                        </div>
-                        @error('Profile_picture')
-                        <div class='text-danger'>{{$message}}</div>
-                        @enderror
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
               <div class="card-footer">

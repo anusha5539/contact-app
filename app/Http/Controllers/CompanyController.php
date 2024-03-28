@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Company;
+use App\Company;
 use App\Http\Requests\CompanyRequest;
 use Illuminate\Http\Request;
 
@@ -63,7 +63,7 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(\App\Company $company)
+    public function edit(Company $company)
     {
      return view('companies.edit',compact('company'));   
     }
@@ -87,9 +87,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(\App\Company $company)
+    public function destroy(Company $company)
     {
         $company->delete();
-        return redirect('/company')->with('message','Company has been deleted succesfully');
+        return back()->with('message','Contact has been deleted successfully....');
     }
 }

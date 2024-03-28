@@ -30,8 +30,8 @@
         @auth
           <ul class="navbar-nav">
             <li>{{request()->is('companies*')}}</li>
-            <li class="nav-item {{request()->is('company*') ? 'active' : ''}} "><a href="{{route('company.index')}}" class="nav-link">Company</a></li>
-            <li class="nav-item {{request()->is('contacts*') ? 'active' : ''}}"><a href="{{route('contacts.index')}}" class="nav-link">Contacts</a></li>
+            <li class="nav-item {{request()->is('company*') ? 'active' : ''}} "><a href="{{route('company.index')}}" class="nav-link text-dark">Company</a></li>
+            <li class="nav-item {{request()->is('contacts*') ? 'active' : ''}}"><a href="{{route('contacts.index')}}" class="nav-link text-dark">Contacts</a></li>
           </ul>
           @endauth
           <ul class="navbar-nav ml-auto">
